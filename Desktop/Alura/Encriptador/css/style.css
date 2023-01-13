@@ -1,7 +1,7 @@
 body{
     position: relative;
     width: 1440px;
-    height: 1024px;
+    height: 600px;
     background: #F3F5FC;
 }
 
@@ -46,9 +46,9 @@ input::placeholder{
 .caja-contenedora{
     position: absolute;
     width: 400px;
-    height: 944px;
+    height: 650px;
     left: 1000px;
-    top: 40px;
+    top: 30px;
     background: #FFFFFF; 
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
@@ -56,10 +56,10 @@ input::placeholder{
 
 .caja-contenedora img {
     position: absolute;
-    width: 336px;
-    height: 304px;
-    left: 20px;
-    top: 283px;
+    width: 300px;
+    height: 250px;
+    left: 40px;
+    top: 150px;
 }
 
 .texto-caja{
@@ -72,12 +72,12 @@ position: absolute;
 width: 336px;
 height: 100px;
 left: 1090px;
-top: 639px;
+top: 450px;
 }
 
 .texto-caja h2{
 width: 238px;
-height: 58px;
+height: 40px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 600;
@@ -108,3 +108,83 @@ flex-grow: 0;
     
 }
 
+.info{
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+position: absolute;
+width: 245px;
+height: 18px;
+left: 240px;
+top: 551px;
+}
+
+.encriptar{
+display: flex;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+position: absolute;
+width: 680px;
+height: 67px;
+left: 240px;
+top: 600px;
+}
+
+.encriptar button{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px 134px;
+gap: 8px;
+width: 328px;
+height: 67px;
+background: #0A3871;
+border-radius: 24px;
+flex: none;
+order: 0;
+flex-grow: 0;
+color: #FFFFFF;
+}
+
+.button-desencriptar{
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 24px 134px;
+gap: 8px;
+
+width: 328px;
+height: 67px;
+
+/* Light gray */
+
+background: #D8DFE8;
+/* Dark blue/dark-blue-300 */
+
+border: 1px solid #0A3871;
+border-radius: 24px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.texto-caja button{
+    top: 150px;
+    position: absolute;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    width: 238px;
+    height: 67px;
+    
+}
