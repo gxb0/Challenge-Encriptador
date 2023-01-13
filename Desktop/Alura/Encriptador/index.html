@@ -15,16 +15,33 @@
         <main>
             <input type="text" id="texto" class="input-text" placeholder="Ingrese el Texto Aqui">
 
-        <div class="caja-contenedora">
-            <img src="image/Muñeco.png">
+        <div class="caja-contenedora" >
+            <img src="image/Muñeco.png" id="imagen">
         </div>
 
-        <div class="texto-caja">
-            <h2>Ningun mensaje fue encontrado <p>Ingrese el texto que desees encriptar o desencriptar</p></h2>
-          
+        <div class="texto-caja" >
+            <h2 id="texto-caja">Ningun mensaje fue encontrado <p>Ingrese el texto que desees encriptar o desencriptar</p></h2> 
+            <button id="boton" style="display:none;">COPIAR</button>
         </div>
+
+        <div class="info">
+            <img src="image/info.png"><p>Solo letras minisculas y sin acento</p>
+        </div>
+
+        <div class="encriptar">
+            <button onclick="ocultar()">encriptar</button>  
+         </div>
        
         </main>
+
+        <script>
+            function ocultar(){
+                document.getElementById("texto-caja").style.display = "none";
+                document.getElementById("imagen").style.display = "none";
+                document.getElementById("boton").style.display = "inline";
+               
+            }
+        </script>
 
     </body>
     </html>
