@@ -21,10 +21,10 @@ top: 40px;
 
 
 
-.input-text{
+.area-text{
 position: absolute;
 width: 577px;
-height: 48px;
+height: 164px;
 left: 240px;
 top: 168px;
 font-family: 'Inter';
@@ -36,10 +36,10 @@ color: #0A3871;
 border: 0;
 background-color: #F3F5FC;
 outline: none;
-
+resize: none;
 }
 
-input::placeholder{
+.area-text::placeholder{
     color: #0A3871;
 }
 
@@ -52,6 +52,21 @@ input::placeholder{
     background: #FFFFFF; 
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+}
+
+.caja-contenedora textarea{
+    width: 336px;
+    height: 605px;
+    position: absolute;
+    top: 18px;
+    left: 28px;
+    border: none;
+    resize: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
 }
 
 .caja-contenedora img {
@@ -134,7 +149,7 @@ left: 240px;
 top: 600px;
 }
 
-.encriptar button{
+.button-encriptar{
 display: flex;
 flex-direction: row;
 align-items: flex-start;
@@ -150,35 +165,34 @@ flex-grow: 0;
 color: #FFFFFF;
 }
 
+.button-encriptar:hover{
+    background: #D8DFE8;
+    color: #0A3871;
+
+}
+
 .button-desencriptar{
-    box-sizing: border-box;
-
-/* Auto layout */
-
+box-sizing: border-box;
 display: flex;
 flex-direction: row;
 align-items: flex-start;
 padding: 24px 134px;
 gap: 8px;
-
 width: 328px;
 height: 67px;
-
-/* Light gray */
-
 background: #D8DFE8;
-/* Dark blue/dark-blue-300 */
-
 border: 1px solid #0A3871;
 border-radius: 24px;
-
-/* Inside auto layout */
-
 flex: none;
 order: 1;
 flex-grow: 0;
 }
 
+.button-desencriptar:hover{
+    background:#0A3871 ; 
+    color: #D8DFE8;
+    border: 1px solid #D8DFE8;
+}
 .texto-caja button{
     top: 150px;
     position: absolute;
