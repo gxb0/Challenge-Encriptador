@@ -13,9 +13,12 @@
         </header>
 
         <main>
-            <input type="text" id="texto" class="input-text" placeholder="Ingrese el Texto Aqui">
+            <!--<input type="text" id="ingreso-texto" class="input-text" placeholder="Ingrese el Texto Aqui">-->
+
+            <textarea name="ingreso-texto" rows="15" cols="45"  id="ingreso-texto" class="area-text"  placeholder="Ingrese el texto aqui"></textarea>
 
         <div class="caja-contenedora" >
+            <textarea name="textarea" rows="30" cols="50" id="textarea"></textarea>
             <img src="image/Muñeco.png" id="imagen">
         </div>
 
@@ -29,18 +32,36 @@
         </div>
 
         <div class="encriptar">
-            <button onclick="ocultar()">encriptar</button>  
+            <button onclick="ocultar()" class="button-encriptar">Encriptar</button>
+            <button onclick="mostrar()" class="button-desencriptar">Desencriptar</button>  
          </div>
        
         </main>
 
-        <script>
+
+
+<script>
             function ocultar(){
                 document.getElementById("texto-caja").style.display = "none";
                 document.getElementById("imagen").style.display = "none";
                 document.getElementById("boton").style.display = "inline";
-               
+                document.getElementById("textarea").style.display="inline"; 
+                var frase = document.getElementById("ingreso-texto").value;
+
+                var texto = frase;
+
+                document.getElementById("textarea").innerHTML = texto;            
             }
+
+            function mostrar(){
+                document.getElementById("texto-caja").style.display = "inline";
+                document.getElementById("imagen").style.display = "inline";
+                document.getElementById("boton").style.display = "none";
+                document.getElementById("textarea").style.display="none"; 
+
+            }
+
+
         </script>
 
     </body>
