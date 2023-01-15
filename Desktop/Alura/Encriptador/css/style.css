@@ -37,10 +37,12 @@ border: 0;
 background-color: #F3F5FC;
 outline: none;
 resize: none;
+text-transform: lowercase;
 }
 
 .area-text::placeholder{
     color: #0A3871;
+    
 }
 
 .caja-contenedora{
@@ -56,9 +58,9 @@ resize: none;
 
 .caja-contenedora textarea{
     width: 336px;
-    height: 605px;
+    height: 505px;
     position: absolute;
-    top: 18px;
+    top: 50px;
     left: 28px;
     border: none;
     resize: none;
@@ -67,6 +69,7 @@ resize: none;
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
+    
 }
 
 .caja-contenedora img {
@@ -163,6 +166,7 @@ flex: none;
 order: 0;
 flex-grow: 0;
 color: #FFFFFF;
+cursor: pointer;
 }
 
 .button-encriptar:hover{
@@ -186,6 +190,7 @@ border-radius: 24px;
 flex: none;
 order: 1;
 flex-grow: 0;
+cursor: pointer;
 }
 
 .button-desencriptar:hover{
@@ -200,5 +205,36 @@ flex-grow: 0;
     border-radius: 24px;
     width: 238px;
     height: 67px;
-    
+    cursor: pointer;
 }
+
+.texto-caja button:hover{
+    background: #0A3871 ; 
+    color: #D8DFE8;;
+}
+
+.progress-bar {
+    
+ } 
+ 
+ .progress-bar > div {
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    color: white;
+    background: green;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 30px;
+    border-radius: 10px;
+    -webkit-animation: progress-bar 2s;
+    -moz-animation: progress-bar 2s;
+ } 
+ 
+ @-webkit-keyframes progress-bar {
+   0% { width: 0; }
+ } 
+ 
+ @-moz-keyframes progress-bar {
+    0% { width: 0; }
+ }
