@@ -17,20 +17,23 @@ La letra "u" es convertida para "ufat"-->
         <header>
             <img src="image/Vector.png">
         </header>
-
+        
         <main>
             <!--<input type="text" id="ingreso-texto" class="input-text" placeholder="Ingrese el Texto Aqui">-->
 
             <textarea name="ingreso-texto" rows="15" cols="45"  id="ingreso-texto" class="area-text"  placeholder="Ingrese el texto aqui"></textarea>
 
         <div class="caja-contenedora" >
+            <div class="progress-bar" style="display: none;" id="progress-bar">
+                <div style="width: 80%">Encriptacion 100% completa.</div>
+             </div>
             <textarea name="textarea" rows="30" cols="50" id="textarea"></textarea>
             <img src="image/Muñeco.png" id="imagen">
         </div>
 
         <div class="texto-caja" >
             <h2 id="texto-caja">Ningun mensaje fue encontrado <p>Ingrese el texto que desees encriptar o desencriptar</p></h2> 
-            <button id="boton" style="display:none;">COPIAR</button>
+            <button id="boton" style="display:none;" onclick="copy()">COPIAR</button>
         </div>
 
         <div class="info">
@@ -44,16 +47,17 @@ La letra "u" es convertida para "ufat"-->
        
         </main>
 
+    <script>
 
 
-<script>
             function ocultar(){
-                document.getElementById("texto-caja").style.display = "none";
-                document.getElementById("imagen").style.display = "none";
-                document.getElementById("boton").style.display = "inline";
-                document.getElementById("textarea").style.display="inline"; 
+                 
                 const frase = document.getElementById("ingreso-texto").value;
-
+                const cadenaTxt = '^[a-z ,.!¡¿?_\n]+$';
+               
+                if(/*frase=="" &&*/ frase.match(cadenaTxt) !=null){
+                    /*alert("Debe ingresar primero el texto a encriptar"); */
+                /*}else{*/
                 const texto = frase
                             .replaceAll(/e/g, "enter")
                             .replaceAll(/i/g, "imes")
@@ -61,24 +65,40 @@ La letra "u" es convertida para "ufat"-->
                             .replaceAll(/o/g, "ober")
                             .replaceAll(/u/g, "ufat");
               
-        
+                            document.getElementById("texto-caja").style.display = "none";
+                document.getElementById("imagen").style.display = "none";
+                document.getElementById("progress-bar").style.display="inline";
+                document.getElementById("boton").style.display = "inline";
+                document.getElementById("textarea").style.display="inline"; 
                 
                 document.getElementById("textarea").innerHTML = texto;
                 
-                
+                }else{
+                    alert("Recuerde que no se permiten ni letras minusculas, ni acentos");
+                }
             }
+            
 
             function mostrar(){
                 document.getElementById("texto-caja").style.display = "inline";
                 document.getElementById("imagen").style.display = "inline";
                 document.getElementById("boton").style.display = "none";
                 document.getElementById("textarea").style.display="none"; 
+                document.getElementById("progress-bar").style.display="none";
 
             }
 
+          function copy(){
+        
+            const content = document.getElementById("textarea");
+            content.select();
+            document.execCommand("copy");
+            alert("copiado");
+        }
 
-        </script>
+
+    </script>
 
     </body>
-    </html>
+</html>
     
